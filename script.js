@@ -9,7 +9,19 @@ function convertToRoman(num) {
       6:['I', 1]
     };
 
-  //your code here
+  //your code here let roman = '';
+
+    for (let i = 0; i < 13; i++) {
+        // Repeat while the current number is greater than or equal to the value of obj[i]
+        while (num >= obj[i][1]) {
+            // Append the symbol to the roman numeral
+            roman += obj[i][0];
+            // Subtract the value from the number
+            num -= obj[i][1];
+        }
+    }
+    return roman;
+	
 
 }
 // You can test your code by running the above function and printing it to console by pressing the run button at the top. To run it with input 36, uncomment the following line
